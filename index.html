@@ -164,18 +164,36 @@
     }
 
     .profile-placeholder {
-      width: 210px;
-      height: 210px;
-      margin: auto;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #12263b;
-      border: 4px solid #00d9ff;
-      color: #00d9ff;
-      font-size: 25px;
-      font-weight: bold;
+      .profile-placeholder {
+  width: 210px;
+  height: 210px;
+  margin: auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #12263b;
+  border: 4px solid #00d9ff;
+  color: #00d9ff;
+  font-size: 25px;
+  font-weight: bold;
+  overflow: hidden;
+  padding: 0; /* ছবি যেন পুরো গোল অংশজুড়ে ছড়ায় */
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ছবিটি বৃত্তের আকারে কাটছাঁট হয়ে সুন্দর সেট হবে */
+  object-position: center; /* মুখ বা মূল অংশটি একদম মাঝে রাখবে */
+  display: block;
+};
+    }
+
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .hero-card h3 {
@@ -512,9 +530,9 @@
 
         <div class="hero-card">
 
-          <!-- পরে এখানে আপনার ছবি বসানো যাবে -->
+          <!-- ImgBB Direct Link দেওয়ার জন্য নিম্নে পরিবর্তন করা হয়েছে -->
           <div class="profile-placeholder">
-            YOUR PHOTO
+            <img src="https://i.ibb.co.com/tTrRdLD2/683785988-977583894757848-4751817633871741095-n.jpg" alt="MD Motiur Rahman" class="
           </div>
 
           <h3>MD MOTIUR RAHMAN</h3>
@@ -549,7 +567,7 @@
 
           <p>
             আমার কাজের মধ্যে Facebook Ads Campaign, Website Design,
-            Social Media Marketing এবং AI-powered video content রয়েছে।
+            Social Media Marketing এবং AI-powered video content রয়েছে।
           </p>
 
           <a href="#contact" class="btn btn-primary">Let's Work Together</a>
