@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MD MOTIUR RAHMAN | Freelancer & Digital Marketer</title>
+
+  <meta name="description" content="MD Motiur Rahman - Freelancer, Digital Marketing Professional, Facebook Ads Specialist, Website Designer and AI Video Creator.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #07111f;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    /* NAVBAR */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background: rgba(7, 17, 31, 0.95);
+      border-bottom: 1px solid #1d3048;
+      backdrop-filter: blur(10px);
+    }
+
+    nav {
+      min-height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .logo span {
+      color: #00d9ff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #d9e5f2;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #00d9ff;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 90px;
+      background:
+        radial-gradient(circle at 80% 30%, rgba(0, 217, 255, 0.12), transparent 30%),
+        radial-gradient(circle at 10% 70%, rgba(75, 0, 255, 0.12), transparent 30%);
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #00d9ff;
+    }
+
+    .hero h2 {
+      color: #d8e3ef;
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: #aebed0;
+      font-size: 18px;
+      max-width: 650px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+      border: 1px solid #00d9ff;
+    }
+
+    .btn-primary {
+      background: #00d9ff;
+      color: #04101b;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 217, 255, 0.25);
+    }
+
+    .btn-outline {
+      color: #00d9ff;
+    }
+
+    .btn-outline:hover {
+      background: #00d9ff;
+      color: #04101b;
+    }
+
+    .hero-card {
+      background: linear-gradient(145deg, #101f32, #091522);
+      border: 1px solid #243c57;
+      border-radius: 25px;
+      padding: 35px;
+      text-align: center;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .profile-placeholder {
+      width: 210px;
+      height: 210px;
+      margin: auto;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #12263b;
+      border: 4px solid #00d9ff;
+      color: #00d9ff;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .hero-card h3 {
+      margin-top: 25px;
+      font-size: 25px;
+    }
+
+    .hero-card p {
+      margin: 5px 0 0;
+      font-size: 15px;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .section-title span {
+      color: #00d9ff;
+    }
+
+    .section-title p {
+      color: #91a5ba;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-box {
+      background: #0d1b2b;
+      border: 1px solid #20364e;
+      padding: 35px;
+      border-radius: 15px;
+    }
+
+    .about-box h3 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .about-box p {
+      color: #b4c4d4;
+      margin-bottom: 15px;
+    }
+
+    .info-list {
+      list-style: none;
+    }
+
+    .info-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #1e3248;
+      color: #b8c8d8;
+    }
+
+    .info-list strong {
+      color: #ffffff;
+    }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: #0d1b2b;
+      border: 1px solid #20364e;
+      padding: 30px 20px;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: #00d9ff;
+    }
+
+    .service-icon {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #99aec2;
+      font-size: 14px;
+    }
+
+    /* SKILLS */
+    .skills {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .skill {
+      margin-bottom: 25px;
+    }
+
+    .skill-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .skill-header span:last-child {
+      color: #00d9ff;
+    }
+
+    .skill-bar {
+      height: 9px;
+      background: #182a3e;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .skill-progress {
+      height: 100%;
+      background: #00d9ff;
+      border-radius: 10px;
+    }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .project-card {
+      background: #0d1b2b;
+      border: 1px solid #20364e;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-7px);
+      border-color: #00d9ff;
+    }
+
+    .project-image {
+      height: 180px;
+      background: linear-gradient(135deg, #102b43, #0b1828);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #00d9ff;
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    .project-content {
+      padding: 25px;
+    }
+
+    .project-content p {
+      color: #99aec2;
+      margin: 10px 0 20px;
+      font-size: 14px;
+    }
+
+    /* CONTACT */
+    .contact-box {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      background: #0d1b2b;
+      border: 1px solid #20364e;
+      padding: 50px 30px;
+      border-radius: 20px;
+    }
+
+    .contact-box h2 {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      color: #9eb1c5;
+      margin-bottom: 25px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .contact-info a {
+      color: #00d9ff;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #1d3048;
+      padding: 30px 0;
+      text-align: center;
+      color: #8297ac;
+      background: #050d17;
+    }
+
+    footer span {
+      color: #00d9ff;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .hero-content,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero {
+        text-align: center;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .hero-card {
+        max-width: 450px;
+        margin: auto;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .nav-links {
+        display: none;
+      }
+
+      .services-grid,
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero h2 {
+        font-size: 21px;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+      }
+
+      .profile-placeholder {
+        width: 170px;
+        height: 170px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#home" class="logo">MD <span>MOTIUR RAHMAN</span></a>
+
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+
+        <div>
+          <h1>MD <span>MOTIUR RAHMAN</span></h1>
+
+          <h2>Freelancer & Digital Marketing Professional</h2>
+
+          <p>
+            I help businesses grow through Facebook Ads, Digital Marketing,
+            Website Design, Social Media Marketing and AI-powered video content.
+          </p>
+
+          <div class="buttons">
+            <a href="#contact" class="btn btn-primary">Hire Me</a>
+            <a href="#work" class="btn btn-outline">View My Work</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+
+          <!-- পরে এখানে আপনার ছবি বসানো যাবে -->
+          <div class="profile-placeholder">
+            YOUR PHOTO
+          </div>
+
+          <h3>MD MOTIUR RAHMAN</h3>
+          <p>Freelancer • Digital Marketer • AI Content Creator</p>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>About <span>Me</span></h2>
+        <p>Get to know me and my professional journey.</p>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-box">
+          <h3>Who I Am</h3>
+
+          <p>
+            আমি একজন Freelancer এবং Digital Marketing Professional।
+            আমি বিভিন্ন ব্যবসা ও ব্যক্তিগত ব্র্যান্ডের জন্য professional
+            digital solutions তৈরি করতে কাজ করি।
+          </p>
+
+          <p>
+            আমার কাজের মধ্যে Facebook Ads Campaign, Website Design,
+            Social Media Marketing এবং AI-powered video content রয়েছে।
+          </p>
+
+          <a href="#contact" class="btn btn-primary">Let's Work Together</a>
+        </div>
+
+        <div class="about-box">
+
+          <h3>My Information</h3>
+
+          <ul class="info-list">
+            <li><strong>Name:</strong> MD Motiur Rahman</li>
+            <li><strong>Profession:</strong> Freelancer</li>
+            <li><strong>Specialization:</strong> Digital Marketing</li>
+            <li><strong>Facebook Ads:</strong> Available</li>
+            <li><strong>Website Design:</strong> Available</li>
+            <li><strong>AI Video:</strong> Available</li>
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>My <span>Services</span></h2>
+        <p>Professional services for businesses and personal brands.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">📈</div>
+          <h3>Facebook Ads</h3>
+          <p>
+            Facebook and Meta Ads Campaign setup, audience targeting,
+            budget planning and campaign optimization.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">💻</div>
+          <h3>Website Design</h3>
+          <p>
+            Modern, responsive and professional websites for businesses,
+            portfolios and personal brands.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🎬</div>
+          <h3>AI Video</h3>
+          <p>
+            AI-powered promotional videos and business advertisements
+            for social media marketing.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">📱</div>
+          <h3>Social Media</h3>
+          <p>
+            Social media content, promotion and digital marketing
+            support for growing online brands.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>My <span>Skills</span></h2>
+        <p>Some of the areas I work with.</p>
+      </div>
+
+      <div class="skills">
+
+        <div class="skill">
+          <div class="skill-header">
+            <span>Digital Marketing</span>
+            <span>90%</span>
+          </div>
+
+          <div class="skill-bar">
+            <div class="skill-progress" style="width:90%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-header">
+            <span>Facebook Ads</span>
+            <span>88%</span>
+          </div>
+
+          <div class="skill-bar">
+            <div class="skill-progress" style="width:88%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-header">
+            <span>Website Design</span>
+            <span>85%</span>
+          </div>
+
+          <div class="skill-bar">
+            <div class="skill-progress" style="width:85%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-header">
+            <span>AI Video Creation</span>
+            <span>90%</span>
+          </div>
+
+          <div class="skill-bar">
+            <div class="skill-progress" style="width:90%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-header">
+            <span>Social Media Marketing</span>
+            <span>87%</span>
+          </div>
+
+          <div class="skill-bar">
+            <div class="skill-progress" style="width:87%"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- WORK -->
+  <section id="work">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>My <span>Work</span></h2>
+        <p>A selection of my professional services and projects.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-image">
+            FACEBOOK ADS
+          </div>
+
+          <div class="project-content">
+            <h3>Facebook Ads Campaign</h3>
+            <p>
+              Professional advertising campaign setup and optimization
+              for business growth.
+            </p>
+
+            <a href="#contact" class="btn btn-outline">Discuss Project</a>
+          </div>
+        </div>
+
+
+        <div class="project-card">
+          <div class="project-image">
+            WEBSITE
+          </div>
+
+          <div class="project-content">
+            <h3>Business Website</h3>
+            <p>
+              Modern responsive website design for businesses and
+              professional brands.
+            </p>
+
+            <a href="#contact" class="btn btn-outline">Discuss Project</a>
+          </div>
+        </div>
+
+
+        <div class="project-card">
+          <div class="project-image">
+            AI VIDEO
+          </div>
+
+          <div class="project-content">
+            <h3>AI Video Advertisement</h3>
+            <p>
+              Creative AI-powered video advertisements for social media
+              and business promotion.
+            </p>
+
+            <a href="#contact" class="btn btn-outline">Discuss Project</a>
+          </div>
+        </div>
+
+
+        <div class="project-card">
+          <div class="project-image">
+            SOCIAL MEDIA
+          </div>
+
+          <div class="project-content">
+            <h3>Social Media Marketing</h3>
+            <p>
+              Social media content and marketing solutions for online
+              businesses.
+            </p>
+
+            <a href="#contact" class="btn btn-outline">Discuss Project</a>
+          </div>
+        </div>
+
+
+        <div class="project-card">
+          <div class="project-image">
+            BRANDING
+          </div>
+
+          <div class="project-content">
+            <h3>Personal Branding</h3>
+            <p>
+              Professional digital branding and online presence
+              development.
+            </p>
+
+            <a href="#contact" class="btn btn-outline">Discuss Project</a>
+          </div>
+        </div>
+
+
+        <div class="project-card">
+          <div class="project-image">
+            DIGITAL MARKETING
+          </div>
+
+          <div class="project-content">
+            <h3>Digital Marketing</h3>
+            <p>
+              Digital marketing strategies designed to help businesses
+              reach their target audience.
+            </p>
+
+            <a href="#contact" class="btn btn-outline">Discuss Project</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Contact <span>Me</span></h2>
+        <p>Have a project in mind? Let's talk.</p>
+      </div>
+
+      <div class="contact-box">
+
+        <h2>Let's Work Together</h2>
+
+        <p>
+          If you need Facebook Ads, Digital Marketing, Website Design
+          or AI Video services, feel free to contact me.
+        </p>
+
+        <div class="contact-info">
+
+          <a href="tel:+8801785001024">
+            📞 01785001024
+          </a>
+
+          <a href="mailto:maxkhanmotin43@gmail.com">
+            ✉️ Email Me
+          </a>
+
+        </div>
+
+        <div class="buttons">
+
+          <a
+            href="https://wa.me/8801785001024"
+            target="_blank"
+            class="btn btn-primary">
+            WhatsApp Me
+          </a>
+
+          <a
+            href="mailto:maxkhanmotin43@gmail.com"
+            class="btn btn-outline">
+            Send Email
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container">
+
+      <p>
+        © 2026 <span>MD MOTIUR RAHMAN</span>.
+        All Rights Reserved.
+      </p>
+
+      <p>
+        Freelancer • Digital Marketing • Website • AI Video
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
