@@ -3,973 +3,649 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>MD MOTIUR RAHMAN | Freelancer & Digital Marketer</title>
-
-  <meta name="description" content="MD Motiur Rahman - Freelancer, Digital Marketing Professional, Facebook Ads Specialist, Website Designer and AI Video Creator.">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #07111f;
-      color: #ffffff;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1150px;
-      margin: auto;
-    }
-
-    /* NAVBAR */
-    header {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      background: rgba(7, 17, 31, 0.95);
-      border-bottom: 1px solid #1d3048;
-      backdrop-filter: blur(10px);
-    }
-
-    nav {
-      min-height: 75px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-      color: #ffffff;
-    }
-
-    .logo span {
-      color: #00d9ff;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: #d9e5f2;
-      font-size: 15px;
-      transition: 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #00d9ff;
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding-top: 100px;
-      padding-bottom: 50px;
-      background:
-        radial-gradient(circle at 80% 30%, rgba(0, 217, 255, 0.12), transparent 30%),
-        radial-gradient(circle at 10% 70%, rgba(75, 0, 255, 0.12), transparent 30%);
-    }
-
-    .hero-content {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .hero h1 {
-      font-size: clamp(36px, 5vw, 60px);
-      line-height: 1.1;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 span {
-      color: #00d9ff;
-    }
-
-    .hero h2 {
-      color: #d8e3ef;
-      font-size: 22px;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      color: #aebed0;
-      font-size: 16px;
-      max-width: 650px;
-      margin-bottom: 30px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: 0.3s;
-      border: 1px solid #00d9ff;
-    }
-
-    .btn-primary {
-      background: #00d9ff;
-      color: #04101b;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(0, 217, 255, 0.25);
-    }
-
-    .btn-outline {
-      color: #00d9ff;
-    }
-
-    .btn-outline:hover {
-      background: #00d9ff;
-      color: #04101b;
-    }
-
-    /* HERO CARD & PROFILE IMAGE */
-    .hero-card {
-      background: linear-gradient(145deg, #101f32, #091522);
-      border: 1px solid #243c57;
-      border-radius: 25px;
-      padding: 30px 20px;
-      text-align: center;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
-      width: 100%;
-      max-width: 380px;
-      margin: auto;
-    }
-
-    .profile-placeholder {
-      width: 200px;
-      height: 200px;
-      margin: 0 auto;
-      border-radius: 50%;
-      border: 4px solid #00d9ff;
-      overflow: hidden;
-      position: relative;
-      background: #12263b;
-    }
-
-    .profile-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-    }
-
-    .hero-card h3 {
-      margin-top: 20px;
-      font-size: 22px;
-    }
-
-    .hero-card p {
-      margin: 5px 0 0;
-      font-size: 14px;
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 80px 0;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .section-title h2 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    .section-title span {
-      color: #00d9ff;
-    }
-
-    .section-title p {
-      color: #91a5ba;
-    }
-
-    /* ABOUT */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .about-box {
-      background: #0d1b2b;
-      border: 1px solid #20364e;
-      padding: 30px;
-      border-radius: 15px;
-    }
-
-    .about-box h3 {
-      font-size: 24px;
-      margin-bottom: 15px;
-    }
-
-    .about-box p {
-      color: #b4c4d4;
-      margin-bottom: 15px;
-    }
-
-    .info-list {
-      list-style: none;
-    }
-
-    .info-list li {
-      padding: 10px 0;
-      border-bottom: 1px solid #1e3248;
-      color: #b8c8d8;
-    }
-
-    .info-list strong {
-      color: #ffffff;
-    }
-
-    /* SERVICES */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .service-card {
-      background: #0d1b2b;
-      border: 1px solid #20364e;
-      padding: 25px 15px;
-      border-radius: 15px;
-      transition: 0.3s;
-    }
-
-    .service-card:hover {
-      transform: translateY(-8px);
-      border-color: #00d9ff;
-    }
-
-    .service-icon {
-      font-size: 35px;
-      margin-bottom: 15px;
-    }
-
-    .service-card h3 {
-      margin-bottom: 10px;
-    }
-
-    .service-card p {
-      color: #99aec2;
-      font-size: 14px;
-    }
-
-    /* SKILLS */
-    .skills {
-      max-width: 850px;
-      margin: auto;
-    }
-
-    .skill {
-      margin-bottom: 20px;
-    }
-
-    .skill-header {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 8px;
-    }
-
-    .skill-header span:last-child {
-      color: #00d9ff;
-    }
-
-    .skill-bar {
-      height: 8px;
-      background: #182a3e;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    .skill-progress {
-      height: 100%;
-      background: #00d9ff;
-      border-radius: 10px;
-    }
-
-    /* PROJECTS */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .project-card {
-      background: #0d1b2b;
-      border: 1px solid #20364e;
-      border-radius: 15px;
-      overflow: hidden;
-      transition: 0.3s;
-    }
-
-    .project-card:hover {
-      transform: translateY(-7px);
-      border-color: #00d9ff;
-    }
-
-    .project-image {
-      height: 160px;
-      background: linear-gradient(135deg, #102b43, #0b1828);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #00d9ff;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .project-content {
-      padding: 20px;
-    }
-
-    .project-content p {
-      color: #99aec2;
-      margin: 10px 0 20px;
-      font-size: 14px;
-    }
-
-    /* CONTACT */
-    .contact-box {
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-      background: #0d1b2b;
-      border: 1px solid #20364e;
-      padding: 40px 20px;
-      border-radius: 20px;
-    }
-
-    .contact-box h2 {
-      font-size: 30px;
-      margin-bottom: 15px;
-    }
-
-    .contact-box p {
-      color: #9eb1c5;
-      margin-bottom: 25px;
-    }
-
-    .contact-info {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-    }
-
-    .contact-info a {
-      color: #00d9ff;
-      font-weight: bold;
-    }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px solid #1d3048;
-      padding: 25px 0;
-      text-align: center;
-      color: #8297ac;
-      background: #050d17;
-    }
-
-    footer span {
-      color: #00d9ff;
-    }
-
-    /* RESPONSIVE DESIGN (FOR PHONES & TABLETS) */
-    @media (max-width: 992px) {
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 900px) {
-      .hero-content,
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        text-align: center;
-      }
-
-      .hero p {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .buttons {
-        justify-content: center;
-      }
-
-      .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 650px) {
-      .nav-links {
-        display: none;
-      }
-
-      .services-grid,
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 50px 0;
-      }
-
-      .hero h1 {
-        font-size: 36px;
-      }
-
-      .hero h2 {
-        font-size: 18px;
-      }
-
-      .section-title h2 {
-        font-size: 28px;
-      }
-
-      .profile-placeholder {
-        width: 160px;
-        height: 160px;
-      }
-    }
-  </style>
+  <title>Ridoy's Creation</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
 
-  <!-- NAVIGATION -->
-  <header>
-    <div class="container">
-      <nav>
-        <a href="#home" class="logo">MD <span>MOTIUR RAHMAN</span></a>
-
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">
+      <h2>Ridoy's Creation</h2>
     </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">HOME</a></li>
+        <li><a href="#about">ABOUT ME</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#testimonial">TESTIMONIAL</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
   </header>
 
-
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="container">
+  <!-- Hero / Home Section -->
+  <section id="home" class="hero-section">
+    <div class="hero-overlay">
       <div class="hero-content">
-
-        <div>
-          <h1>MD <span>MOTIUR RAHMAN</span></h1>
-
-          <h2>Freelancer & Digital Marketing Professional</h2>
-
-          <p>
-            I help businesses grow through Facebook Ads, Digital Marketing,
-            Website Design, Social Media Marketing and AI-powered video content.
-          </p>
-
-          <div class="buttons">
-            <a href="#contact" class="btn btn-primary">Hire Me</a>
-            <a href="#work" class="btn btn-outline">View My Work</a>
-          </div>
+        <h3>Welcome to my website</h3>
+        <h1>I'm a Digital Marketer</h1>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
         </div>
-
-        <div class="hero-card">
-
-          <div class="profile-placeholder">
-            <img src="https://i.ibb.co.com/tTrRdLD2/683785988-977583894757848-4751817633871741095-n.jpg" alt="MD Motiur Rahman" class="profile-img">
-          </div>
-
-          <h3>MD MOTIUR RAHMAN</h3>
-          <p>Freelancer • Digital Marketer • AI Content Creator</p>
-
+        <div class="scroll-down">
+          <div class="mouse"></div>
         </div>
-
       </div>
     </div>
   </section>
 
-
-  <!-- ABOUT -->
-  <section id="about">
+  <!-- About Me Section -->
+  <section id="about" class="about-section">
     <div class="container">
-
-      <div class="section-title">
-        <h2>About <span>Me</span></h2>
-        <p>Get to know me and my professional journey.</p>
-      </div>
-
       <div class="about-grid">
-
-        <div class="about-box">
-          <h3>Who I Am</h3>
-
-          <p>
-            আমি একজন Freelancer এবং Digital Marketing Professional।
-            আমি বিভিন্ন ব্যবসা ও ব্যক্তিগত ব্র্যান্ডের জন্য professional
-            digital solutions তৈরি করতে কাজ করি।
-          </p>
-
-          <p>
-            আমার কাজের মধ্যে Facebook Ads Campaign, Website Design,
-            Social Media Marketing এবং AI-powered video content রয়েছে।
-          </p>
-
-          <a href="#contact" class="btn btn-primary">Let's Work Together</a>
+        <div class="about-img">
+          <img src="https://via.placeholder.com/400x450" alt="Md. Ridoy Ahmmed Roky">
         </div>
-
-        <div class="about-box">
-
-          <h3>My Information</h3>
-
-          <ul class="info-list">
-            <li><strong>Name:</strong> MD Motiur Rahman</li>
-            <li><strong>Profession:</strong> Freelancer</li>
-            <li><strong>Specialization:</strong> Digital Marketing</li>
-            <li><strong>Facebook Ads:</strong> Available</li>
-            <li><strong>Website Design:</strong> Available</li>
-            <li><strong>AI Video:</strong> Available</li>
-          </ul>
-
+        <div class="about-content">
+          <span class="badge">HELLO</span>
+          <h2>I'mMd. Ridoy Ahmmed Roky</h2>
+          <h4>Digital Marketer and Freelancer</h4>
+          <p>I am a freelancer and digital marketer and I work very carefully to make sure you are satisfied.</p>
+          <p>I design various types of logos, posters, Facebook cover photos, YouTube thumbnails, business cards with expertise. I also create Facebook pages, YouTube channels, Instagram accounts and sell them.</p>
         </div>
-
       </div>
     </div>
   </section>
 
-
-  <!-- SERVICES -->
-  <section id="services">
+  <!-- Skills & Info Section -->
+  <section class="skills-info-section">
     <div class="container">
+      <h2 class="section-title">Skills & Info</h2>
+      <div class="skills-grid">
+        <!-- Progress Bars -->
+        <div class="skills-bars">
+          <div class="skill-item">
+            <span class="skill-name">Facebook</span>
+            <div class="bar-bg"><div class="bar-fill red" style="width: 95%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">YouTube</span>
+            <div class="bar-bg"><div class="bar-fill blue" style="width: 80%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Instagram</span>
+            <div class="bar-bg"><div class="bar-fill yellow" style="width: 75%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Email</span>
+            <div class="bar-bg"><div class="bar-fill pink" style="width: 80%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Canva Design</span>
+            <div class="bar-bg"><div class="bar-fill orange" style="width: 85%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">MS Office</span>
+            <div class="bar-bg"><div class="bar-fill darkblue" style="width: 90%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Photo Editing</span>
+            <div class="bar-bg"><div class="bar-fill green" style="width: 88%;"></div></div>
+          </div>
+        </div>
 
-      <div class="section-title">
-        <h2>My <span>Services</span></h2>
-        <p>Professional services for businesses and personal brands.</p>
+        <!-- Personal Info List -->
+        <div class="info-list">
+          <p><strong>AGE</strong> 19+</p>
+          <p><strong>ADDRESS</strong> Faridpur, Pabna District, Rajshahi Division, Bangladesh</p>
+          <p><strong>BLOG</strong> <a href="#">https://www.blogger.com/blog/themes/edit/3642166434525242289</a></p>
+          <p><strong>E-MAIL</strong> mdridoyahmmedroky@gmail.com</p>
+          <p><strong>SITE</strong> <a href="#">https://www.blogger.com/blog/themes/edit/3642166434525242289</a></p>
+          <p><strong>PHONE</strong> +8801775220520</p>
+          <p><strong>FREELANCE</strong> 23 june, 2024</p>
+          <div class="vacation-status">
+            <span class="vacation-btn">On Vacation</span>
+            <span><i class="far fa-calendar-alt"></i> Still Now</span>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
 
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <h2 class="section-title">What Do We Offer</h2>
       <div class="services-grid">
-
         <div class="service-card">
-          <div class="service-icon">📈</div>
-          <h3>Facebook Ads</h3>
-          <p>
-            Facebook and Meta Ads Campaign setup, audience targeting,
-            budget planning and campaign optimization.
-          </p>
+          <i class="fab fa-facebook-f service-icon"></i>
+          <div>
+            <h3>Facebook Page Creation</h3>
+            <p>Facebook page creation and full set up with logo 25% discount's.</p>
+          </div>
         </div>
-
         <div class="service-card">
-          <div class="service-icon">💻</div>
-          <h3>Website Design</h3>
-          <p>
-            Modern, responsive and professional websites for businesses,
-            portfolios and personal brands.
-          </p>
+          <i class="fab fa-instagram service-icon"></i>
+          <div>
+            <h3>Instagram Id Creation</h3>
+            <p>Instagram ID creation and full set up with logo 25% discount's.</p>
+          </div>
         </div>
-
         <div class="service-card">
-          <div class="service-icon">🎬</div>
-          <h3>AI Video</h3>
-          <p>
-            AI-powered promotional videos and business advertisements
-            for social media marketing.
-          </p>
+          <i class="fas fa-edit service-icon"></i>
+          <div>
+            <h3>Canva Design</h3>
+            <p>Any logo, bannar, poster, business card, YouTube thumbnail, facebook page cover photo, restaurant menu creation only 5$ 's.</p>
+          </div>
         </div>
-
         <div class="service-card">
-          <div class="service-icon">📱</div>
-          <h3>Social Media</h3>
-          <p>
-            Social media content, promotion and digital marketing
-            support for growing online brands.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>My <span>Skills</span></h2>
-        <p>Some of the areas I work with.</p>
-      </div>
-
-      <div class="skills">
-
-        <div class="skill">
-          <div class="skill-header">
-            <span>Digital Marketing</span>
-            <span>90%</span>
-          </div>
-
-          <div class="skill-bar">
-            <div class="skill-progress" style="width:90%"></div>
+          <i class="far fa-heart service-icon"></i>
+          <div>
+            <h3>MS Office</h3>
+            <p>CV make, Excel sheet, Salary sheet, PowerPoint Presentation make 25% discount's.</p>
           </div>
         </div>
-
-        <div class="skill">
-          <div class="skill-header">
-            <span>Facebook Ads</span>
-            <span>88%</span>
-          </div>
-
-          <div class="skill-bar">
-            <div class="skill-progress" style="width:88%"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-header">
-            <span>Website Design</span>
-            <span>85%</span>
-          </div>
-
-          <div class="skill-bar">
-            <div class="skill-progress" style="width:85%"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-header">
-            <span>AI Video Creation</span>
-            <span>90%</span>
-          </div>
-
-          <div class="skill-bar">
-            <div class="skill-progress" style="width:90%"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-header">
-            <span>Social Media Marketing</span>
-            <span>87%</span>
-          </div>
-
-          <div class="skill-bar">
-            <div class="skill-progress" style="width:87%"></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- WORK -->
-  <section id="work">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>My <span>Work</span></h2>
-        <p>A selection of my professional services and projects.</p>
-      </div>
-
-      <div class="projects-grid">
-
-        <div class="project-card">
-          <div class="project-image">
-            FACEBOOK ADS
-          </div>
-
-          <div class="project-content">
-            <h3>Facebook Ads Campaign</h3>
-            <p>
-              Professional advertising campaign setup and optimization
-              for business growth.
-            </p>
-
-            <a href="#contact" class="btn btn-outline">Discuss Project</a>
-          </div>
-        </div>
-
-
-        <div class="project-card">
-          <div class="project-image">
-            WEBSITE
-          </div>
-
-          <div class="project-content">
-            <h3>Business Website</h3>
-            <p>
-              Modern responsive website design for businesses and
-              professional brands.
-            </p>
-
-            <a href="#contact" class="btn btn-outline">Discuss Project</a>
-          </div>
-        </div>
-
-
-        <div class="project-card">
-          <div class="project-image">
-            AI VIDEO
-          </div>
-
-          <div class="project-content">
-            <h3>AI Video Advertisement</h3>
-            <p>
-              Creative AI-powered video advertisements for social media
-              and business promotion.
-            </p>
-
-            <a href="#contact" class="btn btn-outline">Discuss Project</a>
-          </div>
-        </div>
-
-
-        <div class="project-card">
-          <div class="project-image">
-            SOCIAL MEDIA
-          </div>
-
-          <div class="project-content">
+        <div class="service-card">
+          <i class="fas fa-birthday-cake service-icon"></i>
+          <div>
             <h3>Social Media Marketing</h3>
-            <p>
-              Social media content and marketing solutions for online
-              businesses.
-            </p>
-
-            <a href="#contact" class="btn btn-outline">Discuss Project</a>
+            <p>All types of social media work is done very efficiently's.</p>
           </div>
         </div>
-
-
-        <div class="project-card">
-          <div class="project-image">
-            BRANDING
-          </div>
-
-          <div class="project-content">
-            <h3>Personal Branding</h3>
-            <p>
-              Professional digital branding and online presence
-              development.
-            </p>
-
-            <a href="#contact" class="btn btn-outline">Discuss Project</a>
+        <div class="service-card">
+          <i class="fas fa-utensils service-icon"></i>
+          <div>
+            <h3>Photos And Video Editing</h3>
+            <p>All types of Photos and Video editing is done very efficiently's.</p>
           </div>
         </div>
-
-
-        <div class="project-card">
-          <div class="project-image">
-            DIGITAL MARKETING
-          </div>
-
-          <div class="project-content">
-            <h3>Digital Marketing</h3>
-            <p>
-              Digital marketing strategies designed to help businesses
-              reach their target audience.
-            </p>
-
-            <a href="#contact" class="btn btn-outline">Discuss Project</a>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <!-- CONTACT SECTION WITH WHATSAPP FORM -->
-  <section id="contact">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Contact <span>Me</span></h2>
-        <p>Have a project in mind? Let's talk.</p>
+  <!-- Counter Stats Banner -->
+  <section class="stats-banner">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <i class="fas fa-code"></i>
+        <h3>53</h3>
+        <p>PROJECTS COMPLETED</p>
       </div>
-
-      <div class="contact-box">
-        <h2>Let's Work Together</h2>
-        <p>Fill in your details below to send me a message directly on WhatsApp.</p>
-
-        <!-- Form for Client Info -->
-        <form id="whatsappForm" style="max-width: 500px; margin: 25px auto 0; text-align: left;">
-          <div style="margin-bottom: 15px;">
-            <label style="display: block; margin-bottom: 5px; color: #00d9ff; font-weight: bold;">Your Name *</label>
-            <input type="text" id="clientName" placeholder="Enter your full name" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #20364e; background: #07111f; color: #fff; font-size: 15px; outline: none;">
-          </div>
-
-          <div style="margin-bottom: 15px;">
-            <label style="display: block; margin-bottom: 5px; color: #00d9ff; font-weight: bold;">Your Email *</label>
-            <input type="email" id="clientEmail" placeholder="Enter your email address" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #20364e; background: #07111f; color: #fff; font-size: 15px; outline: none;">
-          </div>
-
-          <div style="margin-bottom: 15px;">
-            <label style="display: block; margin-bottom: 5px; color: #00d9ff; font-weight: bold;">Phone Number *</label>
-            <input type="tel" id="clientPhone" placeholder="Enter your phone number" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #20364e; background: #07111f; color: #fff; font-size: 15px; outline: none;">
-          </div>
-
-          <div style="margin-bottom: 20px;">
-            <label style="display: block; margin-bottom: 5px; color: #00d9ff; font-weight: bold;">Project Details / Message</label>
-            <textarea id="clientMessage" rows="4" placeholder="Tell me about your project..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #20364e; background: #07111f; color: #fff; font-size: 15px; outline: none; resize: vertical;"></textarea>
-          </div>
-
-          <button type="button" onclick="sendToWhatsApp()" class="btn btn-primary" style="width: 100%; cursor: pointer; font-size: 16px; padding: 14px;">
-            Send Message via WhatsApp
-          </button>
-        </form>
-
-        <div class="contact-info" style="margin-top: 30px;">
-          <a href="tel:+8801785001024">📞 01785001024</a>
-          <a href="mailto:maxkhanmotin43@gmail.com">✉️ Email Me</a>
-        </div>
-
+      <div class="stat-item">
+        <i class="fas fa-coffee"></i>
+        <h3>46</h3>
+        <p>HAPPY CUSTOMERS</p>
+      </div>
+      <div class="stat-item">
+        <i class="fas fa-book"></i>
+        <h3>34</h3>
+        <p>BONUS AND TIPS</p>
+      </div>
+      <div class="stat-item">
+        <i class="fas fa-gift"></i>
+        <h3>27</h3>
+        <p>REVIEWS</p>
       </div>
     </div>
   </section>
 
-  <script>
-    function sendToWhatsApp() {
-      var name = document.getElementById('clientName').value;
-      var email = document.getElementById('clientEmail').value;
-      var phone = document.getElementById('clientPhone').value;
-      var message = document.getElementById('clientMessage').value;
-
-      if (!name || !email || !phone) {
-        alert('Please fill in all the required fields (Name, Email, Phone Number).');
-        return;
-      }
-
-      var whatsappNumber = "8801785001024";
-
-      var fullMessage = "Hello MD Motiur Rahman,%0A%0A" +
-        "I would like to discuss a project with you.%0A%0A" +
-        "*Client Details:*%0A" +
-        "• *Name:* " + encodeURIComponent(name) + "%0A" +
-        "• *Email:* " + encodeURIComponent(email) + "%0A" +
-        "• *Phone:* " + encodeURIComponent(phone) + "%0A%0A" +
-        "*Message:*%0A" + encodeURIComponent(message || "N/A");
-
-      var whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + fullMessage;
-      window.open(whatsappURL, '_blank');
-    }
-  </script>
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio-section">
     <div class="container">
-
-      <div class="section-title">
-        <h2>Contact <span>Me</span></h2>
-        <p>Have a project in mind? Let's talk.</p>
+      <h2 class="section-title">Our Portfolio.</h2>
+      <p class="subtitle">A creative agency that believes in the power of creative ideas and great design.</p>
+      <div class="portfolio-grid">
+        <div class="portfolio-item"><img src="https://via.placeholder.com/350x250" alt="Portfolio 1"></div>
+        <div class="portfolio-item"><img src="https://via.placeholder.com/350x250" alt="Portfolio 2"></div>
+        <div class="portfolio-item"><img src="https://via.placeholder.com/350x250" alt="Portfolio 3"></div>
+        <div class="portfolio-item"><img src="https://via.placeholder.com/350x250" alt="Portfolio 4"></div>
+        <div class="portfolio-item"><img src="https://via.placeholder.com/350x250" alt="Portfolio 5"></div>
+        <div class="portfolio-item"><img src="https://via.placeholder.com/350x250" alt="Portfolio 6"></div>
       </div>
-
-      <div class="contact-box">
-
-        <h2>Let's Work Together</h2>
-
-        <p>
-          If you need Facebook Ads, Digital Marketing, Website Design
-          or AI Video services, feel free to contact me.
-        </p>
-
-        <div class="contact-info">
-
-          <a href="tel:+8801785001024">
-            📞 01785001024
-          </a>
-
-          <a href="mailto:maxkhanmotin43@gmail.com">
-            ✉️ Email Me
-          </a>
-
-        </div>
-
-        <div class="buttons">
-
-          <a
-            href="https://wa.me/8801785001024"
-            target="_blank"
-            class="btn btn-primary">
-            WhatsApp Me
-          </a>
-
-          <a
-            href="mailto:maxkhanmotin43@gmail.com"
-            class="btn btn-outline">
-            Send Email
-          </a>
-
-        </div>
-
+      <div class="center-btn">
+        <button class="btn-see-more">See More</button>
       </div>
     </div>
   </section>
 
-
-  <!-- FOOTER -->
-  <footer>
-
-    <div class="container">
-
-      <p>
-        © 2026 <span>MD MOTIUR RAHMAN</span>.
-        All Rights Reserved.
-      </p>
-
-      <p>
-        Freelancer • Digital Marketing • Website • AI Video
-      </p>
-
+  <!-- Testimonial Section -->
+  <section id="testimonial" class="testimonial-section">
+    <div class="testimonial-overlay">
+      <button class="arrow arrow-left"><i class="fas fa-chevron-left"></i></button>
+      <div class="testimonial-content">
+        <img src="https://via.placeholder.com/100" alt="Tanvir Rahman" class="testimonial-avatar">
+        <p class="testimonial-text">"He is a digital marketer and canva expert ."</p>
+        <h4 class="testimonial-author">Tanvir Rahman, Teacher of Future it</h4>
+      </div>
+      <button class="arrow arrow-right"><i class="fas fa-chevron-right"></i></button>
     </div>
-
-  </footer>
+  </section>
 
 </body>
 </html>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header & Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2b2d2f;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 1000;
+}
+
+.logo h2 {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding-bottom: 5px;
+  transition: color 0.3s;
+}
+
+.nav-links a.active, .nav-links a:hover {
+  color: #ffaa00;
+  border-bottom: 2px solid #ffaa00;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+  position: relative;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(14, 38, 59, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.hero-content h1 {
+  font-size: 54px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.social-icons a {
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  color: #333;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.mouse {
+  width: 20px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+/* About Section */
+.about-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-img img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.badge {
+  background: #ffb400;
+  color: #fff;
+  padding: 4px 12px;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.about-content h2 {
+  font-size: 32px;
+  margin: 15px 0 5px;
+}
+
+.about-content h4 {
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  color: #777;
+  margin-bottom: 15px;
+}
+
+/* Skills & Info Section */
+.skills-info-section {
+  padding: 60px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.skill-item {
+  margin-bottom: 15px;
+}
+
+.skill-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.bar-bg {
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.red { background: #e74c3c; }
+.blue { background: #3498db; }
+.yellow { background: #f1c40f; }
+.pink { background: #e84393; }
+.orange { background: #e67e22; }
+.darkblue { background: #2980b9; }
+.green { background: #2ecc71; }
+
+.info-list p {
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #555;
+}
+
+.info-list strong {
+  display: inline-block;
+  width: 120px;
+  color: #000;
+}
+
+.info-list a {
+  color: #888;
+  text-decoration: none;
+}
+
+.vacation-status {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vacation-btn {
+  background: #ffb400;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+/* Services Section */
+.services-section {
+  padding: 60px 0;
+  background: #f9f9f9;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  gap: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.service-icon {
+  font-size: 30px;
+  color: #333;
+}
+
+.service-card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Stats Banner */
+.stats-banner {
+  background: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1500&q=80') center/cover fixed;
+  padding: 60px 0;
+  color: #fff;
+  position: relative;
+}
+
+.stats-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+}
+
+.stats-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+}
+
+.stat-item i {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.stat-item h3 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.stat-item p {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.center-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-see-more {
+  background: #2b2d2f;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80') center/cover;
+  height: 300px;
+  position: relative;
+}
+
+.testimonial-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  color: #fff;
+  text-align: center;
+}
+
+.testimonial-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial-text {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.testimonial-author {
+  color: #ffb400;
+  font-size: 14px;
+}
+
+.arrow {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .about-grid, .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
