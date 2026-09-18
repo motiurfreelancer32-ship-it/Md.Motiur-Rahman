@@ -8,476 +8,7 @@
 
   <meta name="description" content="MD Motiur Rahman - Freelancer, Digital Marketing Professional, Facebook Ads Specialist, Website Designer and AI Video Creator.">
 
-  <style> <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #07111f;
-    color: #ffffff;
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .container {
-    width: 90%;
-    max-width: 1150px;
-    margin: auto;
-  }
-
-  /* NAVBAR */
-  header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background: rgba(7, 17, 31, 0.95);
-    border-bottom: 1px solid #1d3048;
-    backdrop-filter: blur(10px);
-  }
-
-  nav {
-    min-height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: #ffffff;
-  }
-
-  .logo span {
-    color: #00d9ff;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 28px;
-    list-style: none;
-  }
-
-  .nav-links a {
-    color: #d9e5f2;
-    font-size: 15px;
-    transition: 0.3s;
-  }
-
-  .nav-links a:hover {
-    color: #00d9ff;
-  }
-
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 100px;
-    padding-bottom: 50px;
-    background:
-      radial-gradient(circle at 80% 30%, rgba(0, 217, 255, 0.12), transparent 30%),
-      radial-gradient(circle at 10% 70%, rgba(75, 0, 255, 0.12), transparent 30%);
-  }
-
-  .hero-content {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 40px;
-    align-items: center;
-  }
-
-  .hero h1 {
-    font-size: clamp(36px, 5vw, 60px);
-    line-height: 1.1;
-    margin-bottom: 20px;
-  }
-
-  .hero h1 span {
-    color: #00d9ff;
-  }
-
-  .hero h2 {
-    color: #d8e3ef;
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
-
-  .hero p {
-    color: #aebed0;
-    font-size: 16px;
-    max-width: 650px;
-    margin-bottom: 30px;
-  }
-
-  .buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-
-  .btn {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
-    border: 1px solid #00d9ff;
-  }
-
-  .btn-primary {
-    background: #00d9ff;
-    color: #04101b;
-  }
-
-  .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 217, 255, 0.25);
-  }
-
-  .btn-outline {
-    color: #00d9ff;
-  }
-
-  .btn-outline:hover {
-    background: #00d9ff;
-    color: #04101b;
-  }
-
-  /* HERO CARD & IMAGE FIX */
-  .hero-card {
-    background: linear-gradient(145deg, #101f32, #091522);
-    border: 1px solid #243c57;
-    border-radius: 25px;
-    padding: 30px 20px;
-    text-align: center;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
-    width: 100%;
-    max-width: 380px;
-    margin: auto;
-  }
-
-  .profile-placeholder {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-    border-radius: 50%;
-    border: 4px solid #00d9ff;
-    overflow: hidden;
-    position: relative;
-    background: #12263b;
-  }
-
-  .profile-img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center top !important;
-    display: block !important;
-  }
-
-  .hero-card h3 {
-    margin-top: 20px;
-    font-size: 22px;
-  }
-
-  .hero-card p {
-    margin: 5px 0 0;
-    font-size: 14px;
-  }
-
-  /* SECTIONS */
-  section {
-    padding: 80px 0;
-  }
-
-  .section-title {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-
-  .section-title h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-
-  .section-title span {
-    color: #00d9ff;
-  }
-
-  .section-title p {
-    color: #91a5ba;
-  }
-
-  /* ABOUT */
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-  }
-
-  .about-box {
-    background: #0d1b2b;
-    border: 1px solid #20364e;
-    padding: 30px;
-    border-radius: 15px;
-  }
-
-  .about-box h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-  }
-
-  .about-box p {
-    color: #b4c4d4;
-    margin-bottom: 15px;
-  }
-
-  .info-list {
-    list-style: none;
-  }
-
-  .info-list li {
-    padding: 10px 0;
-    border-bottom: 1px solid #1e3248;
-    color: #b8c8d8;
-  }
-
-  .info-list strong {
-    color: #ffffff;
-  }
-
-  /* SERVICES */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-
-  .service-card {
-    background: #0d1b2b;
-    border: 1px solid #20364e;
-    padding: 25px 15px;
-    border-radius: 15px;
-    transition: 0.3s;
-  }
-
-  .service-card:hover {
-    transform: translateY(-8px);
-    border-color: #00d9ff;
-  }
-
-  .service-icon {
-    font-size: 35px;
-    margin-bottom: 15px;
-  }
-
-  .service-card h3 {
-    margin-bottom: 10px;
-  }
-
-  .service-card p {
-    color: #99aec2;
-    font-size: 14px;
-  }
-
-  /* SKILLS */
-  .skills {
-    max-width: 850px;
-    margin: auto;
-  }
-
-  .skill {
-    margin-bottom: 20px;
-  }
-
-  .skill-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-  }
-
-  .skill-header span:last-child {
-    color: #00d9ff;
-  }
-
-  .skill-bar {
-    height: 8px;
-    background: #182a3e;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-  .skill-progress {
-    height: 100%;
-    background: #00d9ff;
-    border-radius: 10px;
-  }
-
-  /* PROJECTS */
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-  }
-
-  .project-card {
-    background: #0d1b2b;
-    border: 1px solid #20364e;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: 0.3s;
-  }
-
-  .project-card:hover {
-    transform: translateY(-7px);
-    border-color: #00d9ff;
-  }
-
-  .project-image {
-    height: 160px;
-    background: linear-gradient(135deg, #102b43, #0b1828);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #00d9ff;
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  .project-content {
-    padding: 20px;
-  }
-
-  .project-content p {
-    color: #99aec2;
-    margin: 10px 0 20px;
-    font-size: 14px;
-  }
-
-  /* CONTACT */
-  .contact-box {
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-    background: #0d1b2b;
-    border: 1px solid #20364e;
-    padding: 40px 20px;
-    border-radius: 20px;
-  }
-
-  .contact-box h2 {
-    font-size: 30px;
-    margin-bottom: 15px;
-  }
-
-  .contact-box p {
-    color: #9eb1c5;
-    margin-bottom: 25px;
-  }
-
-  .contact-info {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-  }
-
-  .contact-info a {
-    color: #00d9ff;
-    font-weight: bold;
-  }
-
-  /* FOOTER */
-  footer {
-    border-top: 1px solid #1d3048;
-    padding: 25px 0;
-    text-align: center;
-    color: #8297ac;
-    background: #050d17;
-  }
-
-  footer span {
-    color: #00d9ff;
-  }
-
-  /* RESPONSIVE DESIGN (FOR PHONES & TABLETS) */
-  @media (max-width: 992px) {
-    .services-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (max-width: 900px) {
-    .hero-content,
-    .about-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .hero {
-      text-align: center;
-    }
-
-    .hero p {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .buttons {
-      justify-content: center;
-    }
-
-    .projects-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (max-width: 650px) {
-    .nav-links {
-      display: none;
-    }
-
-    .services-grid,
-    .projects-grid {
-      grid-template-columns: 1fr;
-    }
-
-    section {
-      padding: 50px 0;
-    }
-
-    .hero h1 {
-      font-size: 36px;
-    }
-
-    .hero h2 {
-      font-size: 18px;
-    }
-
-    .section-title h2 {
-      font-size: 28px;
-    }
-
-    .profile-placeholder {
-      width: 160px;
-      height: 160px;
-    }
-  }
-</style>
+  <style>
     * {
       margin: 0;
       padding: 0;
@@ -490,6 +21,7 @@
       background: #07111f;
       color: #ffffff;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     a {
@@ -553,7 +85,8 @@
       min-height: 100vh;
       display: flex;
       align-items: center;
-      padding-top: 90px;
+      padding-top: 100px;
+      padding-bottom: 50px;
       background:
         radial-gradient(circle at 80% 30%, rgba(0, 217, 255, 0.12), transparent 30%),
         radial-gradient(circle at 10% 70%, rgba(75, 0, 255, 0.12), transparent 30%);
@@ -562,13 +95,13 @@
     .hero-content {
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
-      gap: 50px;
+      gap: 40px;
       align-items: center;
     }
 
     .hero h1 {
-      font-size: clamp(42px, 6vw, 72px);
-      line-height: 1.05;
+      font-size: clamp(36px, 5vw, 60px);
+      line-height: 1.1;
       margin-bottom: 20px;
     }
 
@@ -578,13 +111,13 @@
 
     .hero h2 {
       color: #d8e3ef;
-      font-size: 25px;
+      font-size: 22px;
       margin-bottom: 20px;
     }
 
     .hero p {
       color: #aebed0;
-      font-size: 18px;
+      font-size: 16px;
       max-width: 650px;
       margin-bottom: 30px;
     }
@@ -597,7 +130,7 @@
 
     .btn {
       display: inline-block;
-      padding: 14px 25px;
+      padding: 12px 24px;
       border-radius: 8px;
       font-weight: bold;
       transition: 0.3s;
@@ -623,70 +156,60 @@
       color: #04101b;
     }
 
+    /* HERO CARD & PROFILE IMAGE */
     .hero-card {
       background: linear-gradient(145deg, #101f32, #091522);
       border: 1px solid #243c57;
       border-radius: 25px;
-      padding: 35px;
+      padding: 30px 20px;
       text-align: center;
       box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 380px;
+      margin: auto;
     }
 
     .profile-placeholder {
-      .profile-placeholder {
-  width: 210px;
-  height: 210px;
-  margin: auto;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #12263b;
-  border: 4px solid #00d9ff;
-  color: #00d9ff;
-  font-size: 25px;
-  font-weight: bold;
-  overflow: hidden;
-  padding: 0; /* ছবি যেন পুরো গোল অংশজুড়ে ছড়ায় */
-}
-
-.profile-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* ছবিটি বৃত্তের আকারে কাটছাঁট হয়ে সুন্দর সেট হবে */
-  object-position: center; /* মুখ বা মূল অংশটি একদম মাঝে রাখবে */
-  display: block;
-};
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      border-radius: 50%;
+      border: 4px solid #00d9ff;
+      overflow: hidden;
+      position: relative;
+      background: #12263b;
     }
 
     .profile-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center top;
+      display: block;
     }
 
     .hero-card h3 {
-      margin-top: 25px;
-      font-size: 25px;
+      margin-top: 20px;
+      font-size: 22px;
     }
 
     .hero-card p {
       margin: 5px 0 0;
-      font-size: 15px;
+      font-size: 14px;
     }
 
     /* SECTIONS */
     section {
-      padding: 100px 0;
+      padding: 80px 0;
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 55px;
+      margin-bottom: 50px;
     }
 
     .section-title h2 {
-      font-size: 40px;
+      font-size: 36px;
       margin-bottom: 10px;
     }
 
@@ -702,19 +225,19 @@
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 50px;
+      gap: 40px;
       align-items: center;
     }
 
     .about-box {
       background: #0d1b2b;
       border: 1px solid #20364e;
-      padding: 35px;
+      padding: 30px;
       border-radius: 15px;
     }
 
     .about-box h3 {
-      font-size: 28px;
+      font-size: 24px;
       margin-bottom: 15px;
     }
 
@@ -747,7 +270,7 @@
     .service-card {
       background: #0d1b2b;
       border: 1px solid #20364e;
-      padding: 30px 20px;
+      padding: 25px 15px;
       border-radius: 15px;
       transition: 0.3s;
     }
@@ -758,7 +281,7 @@
     }
 
     .service-icon {
-      font-size: 38px;
+      font-size: 35px;
       margin-bottom: 15px;
     }
 
@@ -778,7 +301,7 @@
     }
 
     .skill {
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
     .skill-header {
@@ -792,7 +315,7 @@
     }
 
     .skill-bar {
-      height: 9px;
+      height: 8px;
       background: #182a3e;
       border-radius: 10px;
       overflow: hidden;
@@ -825,18 +348,18 @@
     }
 
     .project-image {
-      height: 180px;
+      height: 160px;
       background: linear-gradient(135deg, #102b43, #0b1828);
       display: flex;
       align-items: center;
       justify-content: center;
       color: #00d9ff;
-      font-size: 21px;
+      font-size: 18px;
       font-weight: bold;
     }
 
     .project-content {
-      padding: 25px;
+      padding: 20px;
     }
 
     .project-content p {
@@ -852,12 +375,12 @@
       text-align: center;
       background: #0d1b2b;
       border: 1px solid #20364e;
-      padding: 50px 30px;
+      padding: 40px 20px;
       border-radius: 20px;
     }
 
     .contact-box h2 {
-      font-size: 35px;
+      font-size: 30px;
       margin-bottom: 15px;
     }
 
@@ -882,7 +405,7 @@
     /* FOOTER */
     footer {
       border-top: 1px solid #1d3048;
-      padding: 30px 0;
+      padding: 25px 0;
       text-align: center;
       color: #8297ac;
       background: #050d17;
@@ -892,32 +415,34 @@
       color: #00d9ff;
     }
 
-    /* MOBILE */
+    /* RESPONSIVE DESIGN (FOR PHONES & TABLETS) */
+    @media (max-width: 992px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
     @media (max-width: 900px) {
       .hero-content,
       .about-grid {
         grid-template-columns: 1fr;
       }
 
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
       .hero {
         text-align: center;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .buttons {
         justify-content: center;
       }
 
-      .hero-card {
-        max-width: 450px;
-        margin: auto;
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
@@ -932,24 +457,24 @@
       }
 
       section {
-        padding: 70px 0;
+        padding: 50px 0;
       }
 
       .hero h1 {
-        font-size: 43px;
+        font-size: 36px;
       }
 
       .hero h2 {
-        font-size: 21px;
+        font-size: 18px;
       }
 
       .section-title h2 {
-        font-size: 32px;
+        font-size: 28px;
       }
 
       .profile-placeholder {
-        width: 170px;
-        height: 170px;
+        width: 160px;
+        height: 160px;
       }
     }
   </style>
@@ -999,9 +524,8 @@
 
         <div class="hero-card">
 
-          <!-- ImgBB Direct Link দেওয়ার জন্য নিম্নে পরিবর্তন করা হয়েছে -->
           <div class="profile-placeholder">
-            <img src="https://i.ibb.co.com/tTrRdLD2/683785988-977583894757848-4751817633871741095-n.jpg" alt="MD Motiur Rahman" class="
+            <img src="https://i.ibb.co.com/tTrRdLD2/683785988-977583894757848-4751817633871741095-n.jpg" alt="MD Motiur Rahman" class="profile-img">
           </div>
 
           <h3>MD MOTIUR RAHMAN</h3>
