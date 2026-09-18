@@ -828,6 +828,81 @@
 
   <!-- CONTACT -->
   <section id="contact">
+    <!-- CONTACT SECTION WITH WHATSAPP FORM -->
+  <section id="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Contact <span>Me</span></h2>
+        <p>Have a project in mind? Let's talk.</p>
+      </div>
+
+      <div class="contact-box">
+        <h2>Let's Work Together</h2>
+        <p>Fill in your details below to send me a message directly on WhatsApp.</p>
+
+        <!-- Form for Client Info -->
+        <form id="whatsappForm" style="max-width: 500px; margin: 25px auto 0; text-align: left;">
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; color: #00d9ff; font-weight: bold;">Your Name *</label>
+            <input type="text" id="clientName" placeholder="Enter your full name" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #20364e; background: #07111f; color: #fff; font-size: 15px; outline: none;">
+          </div>
+
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; color: #00d9ff; font-weight: bold;">Your Email *</label>
+            <input type="email" id="clientEmail" placeholder="Enter your email address" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #20364e; background: #07111f; color: #fff; font-size: 15px; outline: none;">
+          </div>
+
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; color: #00d9ff; font-weight: bold;">Phone Number *</label>
+            <input type="tel" id="clientPhone" placeholder="Enter your phone number" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #20364e; background: #07111f; color: #fff; font-size: 15px; outline: none;">
+          </div>
+
+          <div style="margin-bottom: 20px;">
+            <label style="display: block; margin-bottom: 5px; color: #00d9ff; font-weight: bold;">Project Details / Message</label>
+            <textarea id="clientMessage" rows="4" placeholder="Tell me about your project..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #20364e; background: #07111f; color: #fff; font-size: 15px; outline: none; resize: vertical;"></textarea>
+          </div>
+
+          <button type="button" onclick="sendToWhatsApp()" class="btn btn-primary" style="width: 100%; cursor: pointer; font-size: 16px; padding: 14px;">
+            Send Message via WhatsApp
+          </button>
+        </form>
+
+        <div class="contact-info" style="margin-top: 30px;">
+          <a href="tel:+8801785001024">📞 01785001024</a>
+          <a href="mailto:maxkhanmotin43@gmail.com">✉️ Email Me</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function sendToWhatsApp() {
+      var name = document.getElementById('clientName').value;
+      var email = document.getElementById('clientEmail').value;
+      var phone = document.getElementById('clientPhone').value;
+      var message = document.getElementById('clientMessage').value;
+
+      if (!name || !email || !phone) {
+        alert('Please fill in all the required fields (Name, Email, Phone Number).');
+        return;
+      }
+
+      var whatsappNumber = "8801785001024";
+
+      var fullMessage = "Hello MD Motiur Rahman,%0A%0A" +
+        "I would like to discuss a project with you.%0A%0A" +
+        "*Client Details:*%0A" +
+        "• *Name:* " + encodeURIComponent(name) + "%0A" +
+        "• *Email:* " + encodeURIComponent(email) + "%0A" +
+        "• *Phone:* " + encodeURIComponent(phone) + "%0A%0A" +
+        "*Message:*%0A" + encodeURIComponent(message || "N/A");
+
+      var whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + fullMessage;
+      window.open(whatsappURL, '_blank');
+    }
+  </script>
     <div class="container">
 
       <div class="section-title">
