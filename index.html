@@ -1,512 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MD. MOTIUR RAHMAN - Freelancer, AI Video Generator & Web Developer</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            cyan: '#00f2fe',
-                            blue: '#4facfe',
-                            accent: '#38bdf8',
-                            darkBg: '#090d16',
-                            cardBg: '#131c2e',
-                            cardBorder: '#1e293b'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        .bg-grid-pattern {
-            background-image: radial-gradient(rgba(0, 242, 254, 0.12) 1px, transparent 1px);
-            background-size: 28px 28px;
-        }
-        .text-gradient {
-            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .bg-gradient-brand {
-            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
-        }
-        .glass-nav {
-            background: rgba(9, 13, 22, 0.85);
-            backdrop-filter: blur(12px);
-        }
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #090d16;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1e293b;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #38bdf8;
-        }
-    </style>
-</head>
-<body class="bg-brand-darkBg text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-slate-950">
-
-    <!-- Navigation Bar -->
-    <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-nav border-b border-slate-800/80">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <!-- Brand Logo -->
-                <a href="#home" class="flex items-center gap-3 group">
-                    <span class="w-10 h-10 rounded-xl bg-gradient-brand text-slate-950 font-extrabold text-xl flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">MR</span>
-                    <span class="text-xl font-bold tracking-tight text-white">MOTIUR <span class="text-gradient">RAHMAN</span></span>
-                </a>
-
-                <!-- Desktop Navigation Links -->
-                <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-slate-300 hover:text-cyan-400 text-sm font-semibold tracking-wide transition-colors">HOME</a>
-                    <a href="#about" class="text-slate-300 hover:text-cyan-400 text-sm font-semibold tracking-wide transition-colors">ABOUT ME</a>
-                    <a href="#services" class="text-slate-300 hover:text-cyan-400 text-sm font-semibold tracking-wide transition-colors">SERVICES</a>
-                    <a href="#portfolio" class="text-slate-300 hover:text-cyan-400 text-sm font-semibold tracking-wide transition-colors">PORTFOLIO</a>
-                    <a href="#contact" class="px-5 py-2.5 bg-gradient-brand text-slate-950 rounded-full text-sm font-bold shadow-md shadow-cyan-500/20 hover:scale-105 transition-transform">HIRE ME</a>
-                </nav>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-cyan-400 text-2xl focus:outline-none p-2">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-slate-800 px-6 py-4 space-y-4">
-            <a href="#home" class="mobile-link block text-slate-200 hover:text-cyan-400 font-medium py-1">Home</a>
-            <a href="#about" class="mobile-link block text-slate-200 hover:text-cyan-400 font-medium py-1">About Me</a>
-            <a href="#services" class="mobile-link block text-slate-200 hover:text-cyan-400 font-medium py-1">Services</a>
-            <a href="#portfolio" class="mobile-link block text-slate-200 hover:text-cyan-400 font-medium py-1">Portfolio</a>
-            <a href="#contact" class="mobile-link block text-cyan-400 font-bold py-1">Contact Me</a>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 bg-grid-pattern overflow-hidden">
-        <!-- Glow effects -->
-        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10 w-full">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Left Hero Text -->
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs sm:text-sm font-semibold uppercase tracking-wider">
-                        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
-                        1 Year Professional Experience
-                    </div>
-
-                    <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
-                        Hi, I'm <br class="hidden sm:inline" />
-                        <span id="typing-text" class="text-gradient">MD. MOTIUR RAHMAN</span>
-                        <span class="inline-block w-1 h-8 sm:h-12 bg-cyan-400 ml-1 animate-pulse"></span>
-                    </h1>
-
-                    <p class="text-slate-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                        Creative Freelancer & Digital Specialist based in Pabna, Bangladesh. I turn ideas into stunning high-converting websites, engaging AI videos, and full-scale social media campaigns.
-                    </p>
-
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-                        <a href="#portfolio" class="px-8 py-4 bg-gradient-brand text-slate-950 font-bold rounded-xl shadow-lg shadow-cyan-500/25 hover:scale-105 transition-transform flex items-center gap-2">
-                            <span>View My Work</span>
-                            <i class="fas fa-arrow-right text-xs"></i>
-                        </a>
-                        <a href="#contact" class="px-8 py-4 bg-slate-800/80 hover:bg-slate-800 text-white font-semibold rounded-xl border border-slate-700 hover:border-cyan-500/50 transition duration-300">
-                            Get In Touch
-                        </a>
-                    </div>
-
-                    <!-- Social Media Links -->
-                    <div class="flex justify-center lg:justify-start items-center gap-4 pt-6">
-                        <a href="#" class="w-11 h-11 rounded-xl bg-slate-800/80 hover:bg-gradient-brand text-slate-300 hover:text-slate-950 flex items-center justify-center text-lg transition-all duration-300 border border-slate-700/80 hover:scale-110">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="w-11 h-11 rounded-xl bg-slate-800/80 hover:bg-gradient-brand text-slate-300 hover:text-slate-950 flex items-center justify-center text-lg transition-all duration-300 border border-slate-700/80 hover:scale-110">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="#" class="w-11 h-11 rounded-xl bg-slate-800/80 hover:bg-gradient-brand text-slate-300 hover:text-slate-950 flex items-center justify-center text-lg transition-all duration-300 border border-slate-700/80 hover:scale-110">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="w-11 h-11 rounded-xl bg-slate-800/80 hover:bg-gradient-brand text-slate-300 hover:text-slate-950 flex items-center justify-center text-lg transition-all duration-300 border border-slate-700/80 hover:scale-110">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Right Hero Card / Visual -->
-                <div class="lg:col-span-5 flex justify-center">
-                    <div class="relative w-full max-w-md">
-                        <div class="absolute -inset-1 bg-gradient-brand rounded-3xl blur-xl opacity-30 animate-pulse"></div>
-                        <div class="relative rounded-3xl bg-brand-cardBg border border-brand-cardBorder p-6 shadow-2xl space-y-6">
-                            
-                            <!-- Profile Avatar Placeholder -->
-                            <div class="relative rounded-2xl overflow-hidden bg-slate-800 h-80 border border-slate-700">
-                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="MD. MOTIUR RAHMAN" class="w-full h-full object-cover">
-                                <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent">
-                                    <h3 class="text-lg font-bold text-white">MD. MOTIUR RAHMAN</h3>
-                                    <p class="text-xs text-cyan-400 font-medium">Digital Freelancer & AI Artist </p>
-                                </div>
-                            </div>
-
-                            <!-- Highlights Grid -->
-                            <div class="grid grid-cols-2 gap-3 text-center">
-                                <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
-                                    <p class="text-xl font-extrabold text-cyan-400">100%</p>
-                                    <p class="text-[11px] text-slate-400 font-medium">Client Satisfaction</p>
-                                </div>
-                                <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
-                                    <p class="text-xl font-extrabold text-cyan-400">1 Year</p>
-                                    <p class="text-[11px] text-slate-400 font-medium">Working Experience</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- About Me Section -->
-    <section id="about" class="py-24 bg-slate-900/60 border-t border-slate-800 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest">Get To Know Me</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">ABOUT <span class="text-gradient">ME</span></h2>
-                <div class="w-16 h-1 bg-gradient-brand mx-auto mt-3 rounded-full"></div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Left Details -->
-                <div class="lg:col-span-6 space-y-6">
-                    <h3 class="text-2xl font-bold text-white leading-snug">
-                        Passionate Freelancer & Video Creator from Pabna, Bangladesh
-                    </h3>
-                    
-                    <p class="text-slate-300 leading-relaxed">
-                        I am <strong>MD. MOTIUR RAHMAN</strong>, a dedicated 20-year-old freelancer with 1 year of practical experience in digital media production, website creation, and viral social media marketing strategies.
-                    </p>
-
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Whether you need cutting-edge AI video generation, smooth video editing for YouTube or short-form reels, high-converting custom websites, or social media management, I deliver top-notch work tailored to your brand's growth.
-                    </p>
-
-                    <!-- Personal Information Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-800">
-                        <div class="flex items-center gap-3 p-3 bg-brand-cardBg rounded-xl border border-brand-cardBorder">
-                            <i class="fas fa-user text-cyan-400 text-lg"></i>
-                            <div>
-                                <p class="text-xs text-slate-400">Age</p>
-                                <p class="text-sm font-semibold text-white">20 Years Old</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center gap-3 p-3 bg-brand-cardBg rounded-xl border border-brand-cardBorder">
-                            <i class="fas fa-briefcase text-cyan-400 text-lg"></i>
-                            <div>
-                                <p class="text-xs text-slate-400">Experience</p>
-                                <p class="text-sm font-semibold text-white">1 Year Active</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center gap-3 p-3 bg-brand-cardBg rounded-xl border border-brand-cardBorder sm:col-span-2">
-                            <i class="fas fa-map-marker-alt text-cyan-400 text-lg"></i>
-                            <div>
-                                <p class="text-xs text-slate-400">Location / Address</p>
-                                <p class="text-sm font-semibold text-white">Adabaria, Bhangura, Pabna, Rajshahi, Bangladesh</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Skill Bars -->
-                <div class="lg:col-span-6 bg-brand-cardBg p-8 rounded-3xl border border-brand-cardBorder space-y-6">
-                    <h4 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                        <i class="fas fa-laptop-code text-cyan-400"></i>
-                        <span>Core Technical Skills</span>
-                    </h4>
-
-                    <!-- Skill 1 -->
-                    <div>
-                        <div class="flex justify-between text-sm font-medium mb-1">
-                            <span class="text-slate-200">AI Video Generation & Prompt Engineering</span>
-                            <span class="text-cyan-400">92%</span>
-                        </div>
-                        <div class="w-full bg-slate-900 rounded-full h-2.5">
-                            <div class="bg-gradient-brand h-2.5 rounded-full" style="width: 92%"></div>
-                        </div>
-                    </div>
-
-                    <!-- Skill 2 -->
-                    <div>
-                        <div class="flex justify-between text-sm font-medium mb-1">
-                            <span class="text-slate-200">All Video Editing (Premiere Pro, CapCut, DaVinci)</span>
-                            <span class="text-cyan-400">95%</span>
-                        </div>
-                        <div class="w-full bg-slate-900 rounded-full h-2.5">
-                            <div class="bg-gradient-brand h-2.5 rounded-full" style="width: 95%"></div>
-                        </div>
-                    </div>
-
-                    <!-- Skill 3 -->
-                    <div>
-                        <div class="flex justify-between text-sm font-medium mb-1">
-                            <span class="text-slate-200">Website Making (HTML, CSS, JS, WordPress)</span>
-                            <span class="text-cyan-400">88%</span>
-                        </div>
-                        <div class="w-full bg-slate-900 rounded-full h-2.5">
-                            <div class="bg-gradient-brand h-2.5 rounded-full" style="width: 88%"></div>
-                        </div>
-                    </div>
-
-                    <!-- Skill 4 -->
-                    <div>
-                        <div class="flex justify-between text-sm font-medium mb-1">
-                            <span class="text-slate-200">Social Media Marketing & Management</span>
-                            <span class="text-cyan-400">90%</span>
-                        </div>
-                        <div class="w-full bg-slate-900 rounded-full h-2.5">
-                            <div class="bg-gradient-brand h-2.5 rounded-full" style="width: 90%"></div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-24 bg-brand-darkBg relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest">What I Do Best</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">MY <span class="text-gradient">SERVICES</span></h2>
-                <div class="w-16 h-1 bg-gradient-brand mx-auto mt-3 rounded-full"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Service 1 -->
-                <div class="bg-brand-cardBg border border-brand-cardBorder rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 group shadow-xl">
-                    <div class="w-14 h-14 rounded-2xl bg-gradient-brand flex items-center justify-center text-slate-950 text-2xl mb-6 font-bold shadow-lg shadow-cyan-500/20 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">AI Video Generation</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Creating futuristic AI-generated avatars, text-to-video voiceovers, cinematic scenes, and automated promotional videos.
-                    </p>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="bg-brand-cardBg border border-brand-cardBorder rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 group shadow-xl">
-                    <div class="w-14 h-14 rounded-2xl bg-gradient-brand flex items-center justify-center text-slate-950 text-2xl mb-6 font-bold shadow-lg shadow-cyan-500/20 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-film"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">Video Editing Expert</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Full YouTube video editing, TikTok/Reels shorts with engaging subtitles, color grading, sound design, and smooth transitions.
-                    </p>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="bg-brand-cardBg border border-brand-cardBorder rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 group shadow-xl">
-                    <div class="w-14 h-14 rounded-2xl bg-gradient-brand flex items-center justify-center text-slate-950 text-2xl mb-6 font-bold shadow-lg shadow-cyan-500/20 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">Website Development</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Designing responsive, fast-loading personal portfolios, business landing pages, and interactive web applications.
-                    </p>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="bg-brand-cardBg border border-brand-cardBorder rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 group shadow-xl">
-                    <div class="w-14 h-14 rounded-2xl bg-gradient-brand flex items-center justify-center text-slate-950 text-2xl mb-6 font-bold shadow-lg shadow-cyan-500/20 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-bullhorn"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">Social Media Marketing</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Complete page management, ad campaigns, targeted audience growth, and content scheduling for Facebook, IG, and YouTube.
-                    </p>
-                </div>
-
-                <!-- Service 5 -->
-                <div class="bg-brand-cardBg border border-brand-cardBorder rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 group shadow-xl">
-                    <div class="w-14 h-14 rounded-2xl bg-gradient-brand flex items-center justify-center text-slate-950 text-2xl mb-6 font-bold shadow-lg shadow-cyan-500/20 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-photo-video"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">Graphics & Thumbnails</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        High CTR YouTube thumbnail design, social banners, promotional posters, and branding logos.
-                    </p>
-                </div>
-
-                <!-- Service 6 -->
-                <div class="bg-brand-cardBg border border-brand-cardBorder rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 group shadow-xl">
-                    <div class="w-14 h-14 rounded-2xl bg-gradient-brand flex items-center justify-center text-slate-950 text-2xl mb-6 font-bold shadow-lg shadow-cyan-500/20 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">Freelance Consulting</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        One-on-one video project assistance, social media strategy audits, and digital solutions tailored to client needs.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Counter Section -->
-    <section class="py-16 bg-slate-900 border-y border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div class="p-6 bg-brand-cardBg rounded-2xl border border-brand-cardBorder">
-                    <div class="text-4xl font-extrabold text-gradient mb-1 counter" data-target="45">0</div>
-                    <p class="text-slate-400 font-medium text-xs uppercase tracking-wider">Projects Completed</p>
-                </div>
-                <div class="p-6 bg-brand-cardBg rounded-2xl border border-brand-cardBorder">
-                    <div class="text-4xl font-extrabold text-gradient mb-1 counter" data-target="38">0</div>
-                    <p class="text-slate-400 font-medium text-xs uppercase tracking-wider">Satisfied Clients</p>
-                </div>
-                <div class="p-6 bg-brand-cardBg rounded-2xl border border-brand-cardBorder">
-                    <div class="text-4xl font-extrabold text-gradient mb-1 counter" data-target="1">0</div>
-                    <p class="text-slate-400 font-medium text-xs uppercase tracking-wider">Year Experience</p>
-                </div>
-                <div class="p-6 bg-brand-cardBg rounded-2xl border border-brand-cardBorder">
-                    <div class="text-4xl font-extrabold text-gradient mb-1 counter" data-target="99">0</div>
-                    <p class="text-slate-400 font-medium text-xs uppercase tracking-wider">Positive Rating %</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Gallery Section -->
-    <section id="portfolio" class="py-24 bg-brand-darkBg relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest">My Recent Projects</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">FEATURED <span class="text-gradient">WORKS</span></h2>
-                <div class="w-16 h-1 bg-gradient-brand mx-auto mt-3 rounded-full"></div>
-            </div>
-
-            <!-- Portfolio Filter Tabs -->
-            <div class="flex flex-wrap justify-center gap-3 mb-12">
-                <button class="portfolio-btn active bg-gradient-brand text-slate-950 font-bold px-6 py-2.5 rounded-full text-xs sm:text-sm transition-all" data-filter="all">All Projects</button>
-                <button class="portfolio-btn bg-slate-800 text-slate-300 hover:text-white font-semibold px-6 py-2.5 rounded-full text-xs sm:text-sm transition-all" data-filter="video">Video & AI</button>
-                <button class="portfolio-btn bg-slate-800 text-slate-300 hover:text-white font-semibold px-6 py-2.5 rounded-full text-xs sm:text-sm transition-all" data-filter="web">Web Making</button>
-                <button class="portfolio-btn bg-slate-800 text-slate-300 hover:text-white font-semibold px-6 py-2.5 rounded-full text-xs sm:text-sm transition-all" data-filter="social">Social Marketing</button>
-            </div>
-
-            <!-- Portfolio Grid Showcase -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Video Item 1 (HTML5 Video Preview Card) -->
+<!-- Video Item 3 -->
                 <div class="portfolio-item video group bg-brand-cardBg rounded-2xl overflow-hidden border border-brand-cardBorder">
                     <div class="relative aspect-video bg-black">
-                        <video class="w-full h-full object-cover" controls poster="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80">
-                            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+                        <video class="w-full h-full object-cover" controls poster="https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=600&q=80">
+                            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" type="video/mp4">
                             Your browser does not support video tag.
                         </video>
                     </div>
                     <div class="p-5">
                         <span class="text-cyan-400 text-xs font-semibold uppercase">AI Video Generation</span>
-                        <h4 class="text-lg font-bold text-white mt-1">AI Promo & Animation Reel</h4>
-                        <p class="text-slate-400 text-xs mt-1">Futuristic visual rendering and sound sync created for client marketing.</p>
-                    </div>
-                </div>
-
-                <!-- Video Item 2 -->
-                <div class="portfolio-item video group bg-brand-cardBg rounded-2xl overflow-hidden border border-brand-cardBorder">
-                    <div class="relative aspect-video bg-black">
-                        <video class="w-full h-full object-cover" controls poster="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80">
-                            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
-                            Your browser does not support video tag.
-                        </video>
-                    </div>
-                    <div class="p-5">
-                        <span class="text-cyan-400 text-xs font-semibold uppercase">Video Editing</span>
-                        <h4 class="text-lg font-bold text-white mt-1">Cinematic Vlogs & Short Edits</h4>
-                        <p class="text-slate-400 text-xs mt-1">Color graded, dynamic cuts with engagement captions for social reels.</p>
-                    </div>
-                </div>
-
-                <!-- Web Item 1 -->
-                <div class="portfolio-item web group bg-brand-cardBg rounded-2xl overflow-hidden border border-brand-cardBorder">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="Web Design" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="p-5">
-                        <span class="text-cyan-400 text-xs font-semibold uppercase">Website Development</span>
-                        <h4 class="text-lg font-bold text-white mt-1">Modern Agency Landing Page</h4>
-                        <p class="text-slate-400 text-xs mt-1">Responsive HTML/Tailwind web design built for business presentation.</p>
-                    </div>
-                </div>
-
-                <!-- Social Marketing Item 1 -->
-                <div class="portfolio-item social group bg-brand-cardBg rounded-2xl overflow-hidden border border-brand-cardBorder">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=80" alt="Social Marketing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    </div>
-                    <p class="p-5">
-                        <span class="text-cyan-400 text-xs font-semibold uppercase">Social Media Marketing</span>
-                        <h4 class="text-lg font-bold text-white mt-1">Brand Growth & Ad Campaign</h4>
-                        <p class="text-slate-400 text-xs mt-1">Targeted Facebook & Instagram promotion reaching 50k+ audience.</p>
-                    </p>
-                </div>
-
-                <!-- Video Item 3 -->
-                <div class="portfolio-item video group bg-brand-cardBg rounded-2xl overflow-hidden border border-brand-cardBorder">
-                    <div class="relative aspect-video bg-black">
-                        <video class="w-full h-full object-cover" controls poster="https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=600&q=80">
-                            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4">
-                            Your browser does not support video tag.
-                        </video>
-                    </div>
-                    <div class="p-5">
-                        <span class="text-cyan-400 text-xs font-semibold uppercase">AI Video & Editing</span>
-                        <h4 class="text-lg font-bold text-white mt-1">Commercial Product Video</h4>
-                        <p class="text-slate-400 text-xs mt-1">AI generated product avatars and realistic audio editing.</p>
-                    </div>
-                </div>
-
-                <!-- Web Item 2 -->
-                <div class="portfolio-item web group bg-brand-cardBg rounded-2xl overflow-hidden border border-brand-cardBorder">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Web Dashboard" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="p-5">
-                        <span class="text-cyan-400 text-xs font-semibold uppercase">Website Development</span>
-                        <h4 class="text-lg font-bold text-white mt-1">E-Commerce Portfolio Site</h4>
-                        <p class="text-slate-400 text-xs mt-1">Fast interactive storefront built with clean JS functionality.</p>
+                        <h4 class="text-lg font-bold text-white mt-1">Sci-Fi Short Teaser</h4>
+                        <p class="text-slate-400 text-xs mt-1">High-definition AI generated scene compositions and audio design.</p>
                     </div>
                 </div>
 
@@ -515,220 +18,77 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-slate-900/80 border-t border-slate-800 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest">Let's Work Together</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">CONTACT <span class="text-gradient">ME</span></h2>
-                <div class="w-16 h-1 bg-gradient-brand mx-auto mt-3 rounded-full"></div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                
-                <!-- Contact Information -->
-                <div class="lg:col-span-5 space-y-6">
-                    <div class="p-6 bg-brand-cardBg rounded-2xl border border-brand-cardBorder flex items-start gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-brand text-slate-950 flex items-center justify-center text-xl font-bold shrink-0">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xs font-semibold text-slate-400 uppercase">My Address</h4>
-                            <p class="text-white font-medium text-sm mt-1">Adabaria, Bhangura, Pabna, Rajshahi Division, Bangladesh</p>
-                        </div>
-                    </div>
-
-                    <div class="p-6 bg-brand-cardBg rounded-2xl border border-brand-cardBorder flex items-start gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-brand text-slate-950 flex items-center justify-center text-xl font-bold shrink-0">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xs font-semibold text-slate-400 uppercase">Email Me</h4>
-                            <p class="text-white font-medium text-sm mt-1">motiurfreelancer32@gmail.com</p>
-                        </div>
-                    </div>
-
-                    <div class="p-6 bg-brand-cardBg rounded-2xl border border-brand-cardBorder flex items-start gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-brand text-slate-950 flex items-center justify-center text-xl font-bold shrink-0">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xs font-semibold text-slate-400 uppercase">Phone / WhatsApp</h4>
-                            <p class="text-white font-medium text-sm mt-1">+880 1785001024</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact Form -->
-                <div class="lg:col-span-7 bg-brand-cardBg p-8 rounded-2xl border border-brand-cardBorder">
-                    <form id="contact-form" class="space-y-6">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Your Name</label>
-                                <input type="text" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400" placeholder="Enter full name">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Your Email</label>
-                                <input type="email" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400" placeholder="name@example.com">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Subject / Service Needed</label>
-                            <input type="text" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400" placeholder="AI Video / Web Editing / Marketing">
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Message</label>
-                            <textarea rows="4" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400" placeholder="Describe your project details..."></textarea>
-                        </div>
-
-                        <button type="submit" class="w-full py-4 bg-gradient-brand text-slate-950 font-bold rounded-xl shadow-lg shadow-cyan-500/20 hover:scale-[1.01] transition duration-300 uppercase tracking-wider">
-                            Send Message
-                        </button>
-
-                        <div id="form-alert" class="hidden p-4 rounded-xl text-center text-sm font-medium"></div>
-                    </form>
-                </div>
-
+    <section id="contact" class="py-24 bg-slate-900/60 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest">Get In Touch</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">CONTACT <span class="text-gradient">ME</span></h2>
+            <div class="w-16 h-1 bg-gradient-brand mx-auto mt-3 rounded-full mb-8"></div>
+            <p class="text-slate-400 max-w-lg mx-auto text-sm sm:text-base">Ready to take your brand or digital video project to the next level? Reach out today.</p>
+            <div class="mt-8">
+                <a href="mailto:contact@example.com" class="px-8 py-4 bg-gradient-brand text-slate-950 font-bold rounded-xl shadow-lg shadow-cyan-500/20 hover:scale-105 transition-transform inline-block">Send a Message</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 py-8 border-t border-slate-900 text-center text-slate-500 text-xs">
-        <div class="max-w-7xl mx-auto px-4">
-            <p>&copy; 2026 MD. MOTIUR RAHMAN. All rights reserved.</p>
-        </div>
+    <footer class="py-8 bg-brand-darkBg border-t border-slate-800/80 text-center text-xs text-slate-500">
+        <p>&copy; 2026 MD. MOTIUR RAHMAN. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript Functionality -->
-    <script>
-        // 1. Typing Animation
-        const titles = [
-            "MD. MOTIUR RAHMAN",
-            "AI Video Generator",
-            "Video Editing Expert",
-            "Website Maker",
-            "Social Media Marketer"
-        ];
-        let titleIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        const typingElement = document.getElementById("typing-text");
-
-        function typeEffect() {
-            const currentTitle = titles[titleIndex];
-            
-            if (isDeleting) {
-                typingElement.textContent = currentTitle.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingElement.textContent = currentTitle.substring(0, charIndex + 1);
-                charIndex++;
-            }
-
-            let typeSpeed = isDeleting ? 50 : 100;
-
-            if (!isDeleting && charIndex === currentTitle.length) {
-                typeSpeed = 2000;
-                isDeleting = true;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                titleIndex = (titleIndex + 1) % titles.length;
-                typeSpeed = 400;
-            }
-
-            setTimeout(typeEffect, typeSpeed);
-        }
-
-        document.addEventListener("DOMContentLoaded", typeEffect);
-
-        // 2. Mobile Menu Navigation Toggle
-        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-        const mobileMenu = document.getElementById("mobile-menu");
-        const mobileLinks = document.querySelectorAll(".mobile-link");
-
-        mobileMenuBtn.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
-        });
-
-        mobileLinks.forEach(link => {
-            link.addEventListener("click", () => {
-                mobileMenu.classList.add("hidden");
-            });
-        });
-
-        // 3. Stats Counter Animation
-        const counters = document.querySelectorAll('.counter');
-        let counterTriggered = false;
-
-        window.addEventListener('scroll', () => {
-            const statsSection = document.querySelector('.counter')?.parentElement;
-            if (statsSection && !counterTriggered) {
-                const sectionTop = statsSection.getBoundingClientRect().top;
-                if (sectionTop < window.innerHeight - 80) {
-                    counters.forEach(counter => {
-                        const target = +counter.getAttribute('data-target');
-                        let count = 0;
-                        const increment = target / 30;
-
-                        const updateCounter = () => {
-                            count += increment;
-                            if (count < target) {
-                                counter.innerText = Math.ceil(count);
-                                setTimeout(updateCounter, 40);
-                            } else {
-                                counter.innerText = target;
-                            }
-                        };
-                        updateCounter();
-                    });
-                    counterTriggered = true;
-                }
-            }
-        });
-
-        // 4. Portfolio Filter Functionality
-        const portfolioBtns = document.querySelectorAll('.portfolio-btn');
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-        portfolioBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                portfolioBtns.forEach(b => {
-                    b.classList.remove('bg-gradient-brand', 'text-slate-950');
-                    b.classList.add('bg-slate-800', 'text-slate-300');
-                });
-
-                btn.classList.remove('bg-slate-800', 'text-slate-300');
-                btn.classList.add('bg-gradient-brand', 'text-slate-950');
-
-                const filter = btn.getAttribute('data-filter');
-
-                portfolioItems.forEach(item => {
-                    if (filter === 'all' || item.classList.contains(filter)) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
-
-        // 5. Contact Form Handler
-        const contactForm = document.getElementById('contact-form');
-        const formAlert = document.getElementById('form-alert');
-
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            formAlert.classList.remove('hidden', 'bg-red-500/20', 'text-red-400');
-            formAlert.classList.add('bg-emerald-500/20', 'text-emerald-400', 'border', 'border-emerald-500/30');
-            formAlert.textContent = 'Thank you, MD. MOTIUR RAHMAN has received your message and will contact you shortly!';
-            contactForm.reset();
-
-            setTimeout(() => {
-                formAlert.classList.add('hidden');
-            }, 6000);
-        });
-    </script>
 </body>
 </html>
+<script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn?.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Portfolio Filtering
+    const filterBtns = document.querySelectorAll('.portfolio-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => {
+                b.classList.remove('active', 'bg-gradient-brand', 'text-slate-950');
+                b.classList.add('bg-slate-800', 'text-slate-300');
+            });
+            btn.classList.add('active', 'bg-gradient-brand', 'text-slate-950');
+            btn.classList.remove('bg-slate-800', 'text-slate-300');
+
+            const filter = btn.getAttribute('data-filter');
+            portfolioItems.forEach(item => {
+                if (filter === 'all' || item.classList.contains(filter)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Number Counter Animation
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const speed = target / 30;
+        const updateCount = () => {
+            count += speed;
+            if (count < target) {
+                counter.innerText = Math.ceil(count);
+                setTimeout(updateCount, 40);
+            } else {
+                counter.innerText = target + (counter.getAttribute('data-target') === '99' ? '%' : '+');
+            }
+        };
+        updateCount();
+    });
+</script>
